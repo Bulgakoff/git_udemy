@@ -19,8 +19,19 @@ class Rectangle(Shape):
         self.width = width
         self.height = height
         print('rectagle draw')
+        Shape.area(self)  # леголеголеголеголеголеголего
+
+    def area(self):  # переорпределяем метод
+        return self.width * self.height
+
+    def perimetr(self):
+        return 2 * (self.width + self.height)
+
+    def draw(self):
+        print(f'Drawing rectangle with width =  {self.width} and higth = {self.height}')
 
 
 # /////////////////////////////////////
 sh = Shape()
-
+rect = Rectangle(12, 45)
+print(rect.draw())
