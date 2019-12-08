@@ -15,11 +15,13 @@ class Shape:
 
 class Rectangle(Shape):
     def __init__(self, width, height):
-        Shape.__init__(self)
+        Shape.__init__(self)# вызывается конструктор базового и передаем туда себя
         self.width = width
         self.height = height
         print('rectagle draw')
-        Shape.area(self)  # леголеголеголеголеголеголего
+        # Shape.area(self)  # леголеголеголеголеголеголего для преопределения вызываю area передаю туда себя
+        # Shape.perimetr(self) #вызов из конструкотора
+        # Shape.draw(self) #вызов из конструкотора
 
     def area(self):  # переорпределяем метод
         return self.width * self.height
@@ -33,5 +35,7 @@ class Rectangle(Shape):
 
 # /////////////////////////////////////
 sh = Shape()
-rect = Rectangle(12, 45)
+rect = Rectangle(12, 10)
 print(rect.draw())
+print(f'-------------area---===========>{rect.area()} sm')
+print(f'--------------perimetr--===========>{rect.perimetr()} sm')
