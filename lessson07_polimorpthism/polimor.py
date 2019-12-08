@@ -60,15 +60,19 @@ class Triangle(Shape):
         return cls(aa, bb, cc)
 
 
-#    ?//////////////////////////////////
+
 tri = Triangle(2, 6, 10)
 print(f'-------perimetr--------> {tri.perimetr()}')
 tri.draw()
+print('# /////////////////////////////////////')
 tri1 = Triangle.draw_next(11, 22, 33)
 tri1.draw()
-# /////////////////////////////////////
+print('# /////////////////////////////////////')
 sh = Shape()
 rect = Rectangle(12, 10)
 rect.draw()
 print(f'----------rect---area---===========>{rect.area()} sm')
 print(f'-----------rect---perimetr--===========>{rect.perimetr()} sm')
+print('# //////////////////так работает полиморфизм ///////////////////')
+for sha in [rect, tri, tri1, sh]:
+    sha.draw()
